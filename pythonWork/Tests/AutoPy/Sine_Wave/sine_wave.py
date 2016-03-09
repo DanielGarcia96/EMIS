@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+#just want to be clear, this isn't mine
+
 import autopy
 import math
 import time
