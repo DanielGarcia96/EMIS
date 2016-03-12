@@ -20,12 +20,17 @@ public class Map extends JPanel {
 	protected ArrayList<Point> eatenEarth;
 	
 	public Map(String mapName) {
+		super();
+		setSize(500,500);
+		
 		worms = new ArrayList<Worm>();
 		eatenEarth = new ArrayList<Point>();
 		this.mapName = mapName;
 		mapName = "Garden";
 		gradient = 0;
 		loadMap(mapName);
+		
+		setVisible(true);
 	}
 	
 	public void loadMap(String pathname) {
@@ -34,6 +39,10 @@ public class Map extends JPanel {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void addWorm(Worm w) {
+		worms.add(w);
 	}
 	
 	public BufferedImage getMap() {
