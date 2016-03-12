@@ -4,6 +4,6 @@ public class HardenedWorm extends Worm {
 
 	public HardenedWorm(String username) {
 		super(username);
-		power = 1;
+		super.power = 1;
 	}
 }

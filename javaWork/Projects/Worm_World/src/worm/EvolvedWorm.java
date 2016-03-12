@@ -4,7 +4,7 @@ public class EvolvedWorm extends Worm {
 
 	public EvolvedWorm(String username) {
 		super(username);
-		power = 3;
+		super.power = 3;
 	}
 
 }

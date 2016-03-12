@@ -4,7 +4,7 @@ public class StandardWorm extends Worm {
 
 	public StandardWorm(String username) {
 		super(username);
-		power = 0;
+		super.power = 0;
 	}
 	
 }

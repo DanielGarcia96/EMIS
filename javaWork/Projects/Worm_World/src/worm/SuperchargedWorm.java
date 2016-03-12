@@ -4,7 +4,7 @@ public class SuperchargedWorm extends Worm{
 
 	public SuperchargedWorm(String username) {
 		super(username);
-		power = 2;
+		super.power = 2;
 	}
 
 }
