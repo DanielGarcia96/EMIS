@@ -1,57 +1,31 @@
 package worm;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.TimerTask;
 
-import javax.swing.Timer;
+import java.util.Timer;
 
 import map.Map;
 
 public class WormController implements KeyListener {
 	
 	public HashSet<Integer> pressedKeys = new HashSet<Integer>();
+	public Timer keyTimer;
 	public Worm thisWorm;
 	public Map  map;
 	
-	public WormController(Worm w) {
+	public WormController(Worm w, Map m) {
 		
 		thisWorm = w;
+		map = m;
 		
         //Check every 20ms if there's keys pressed
-        new Timer(20, new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                if(!pressedKeys.isEmpty()){
-                    Iterator<Integer> i = pressedKeys.iterator();
-                    while(i.hasNext()){
-                    	int compare = i.next().intValue();
-                    	switch(compare) {
-                    		case 'w':
-                    			thisWorm.changePosition(thisWorm.getPosition().getX(), thisWorm.getPosition().getY()+1);
-                    			map.eatEarth(thisWorm.getPosition());
-                    			break;
-                    		case 's':
-                    			thisWorm.changePosition(thisWorm.getPosition().getX(), thisWorm.getPosition().getY()-1);
-                    			map.eatEarth(thisWorm.getPosition());
-                    			break;
-                    		case 'a':
-                    			thisWorm.changePosition(thisWorm.getPosition().getX()-1, thisWorm.getPosition().getY());
-                    			map.eatEarth(thisWorm.getPosition());
-                    			break;
-                    		case 'd':
-                    			thisWorm.changePosition(thisWorm.getPosition().getX()+1, thisWorm.getPosition().getY()+1);
-                    			map.eatEarth(thisWorm.getPosition());
-                    			break;
-                    	}
-                    }
-                }
-                map.update();
-            }
-        }).start();
+        keyTimer = new Timer();
+        keyTimer.schedule(new KeyTimer(), 0, 20);
+        keyTimer.schedule(new DirtTimer(), 7000, 7000);
 	}
 
 	@Override
@@ -70,5 +44,44 @@ public class WormController implements KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent arg0) {}
+	
+	private class KeyTimer extends TimerTask {
+		public void run() {
+			if(!pressedKeys.isEmpty()){
+                Iterator<Integer> i = pressedKeys.iterator();
+                while(i.hasNext()){
+                	int compare = i.next().intValue();
+                	switch(compare) {
+                		case 'W':
+                			thisWorm.changePosition(thisWorm.getPosition().getX(), thisWorm.getPosition().getY()-1);
+                			map.eatEarth(thisWorm.getPosition());
+                			break;
+                		case 'S':
+                			thisWorm.changePosition(thisWorm.getPosition().getX(), thisWorm.getPosition().getY()+1);
+                			map.eatEarth(thisWorm.getPosition());
+                			break;
+                		case 'A':
+                			thisWorm.changePosition(thisWorm.getPosition().getX()-1, thisWorm.getPosition().getY());
+                			map.eatEarth(thisWorm.getPosition());
+                			break;
+                		case 'D':
+                			thisWorm.changePosition(thisWorm.getPosition().getX()+1, thisWorm.getPosition().getY());
+                			map.eatEarth(thisWorm.getPosition());
+                			break;
+                	}
+                }
+            }
+            map.repaint();
+        }
+	}
+	
+	private class DirtTimer extends TimerTask {
+
+		@Override
+		public void run() {
+			if (!map.eatenEarth.isEmpty())
+			map.eatenEarth.remove(0);
+		}
+	}
 
 }

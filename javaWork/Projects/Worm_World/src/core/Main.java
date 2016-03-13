@@ -17,13 +17,13 @@ public class Main extends JFrame {
 		setSize(500,500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
-		this.worm = new Worm("Danny", "StandardWorm");
-		addKeyListener(this.worm.getController());
+		worm = new Worm("Danny", "StandardWorm");
 		
 		this.map = new Map("Garden");
 		map.addWorm(worm);
+		addKeyListener(map.getController(worm));
 		
-		setContentPane(map);
+		add(map, BorderLayout.CENTER);
 		pack();
 		setVisible(true);
 	}

@@ -11,46 +11,53 @@ import javax.swing.JPanel;
 import java.util.ArrayList;
 
 import worm.Worm;
+import worm.WormController;
 
 public class Map extends JPanel {
 	protected ArrayList<Worm> worms;
+	protected ArrayList<WormController> wormControllers;
 	protected short gradient;
 	protected String mapName;
 	protected BufferedImage map = null;
-	protected ArrayList<Point> eatenEarth;
+	public ArrayList<Point> eatenEarth;
 	
 	public Map(String mapName) {
 		super();
 		setSize(500,500);
 		
 		worms = new ArrayList<Worm>();
+		wormControllers = new ArrayList<WormController>();
 		eatenEarth = new ArrayList<Point>();
 		this.mapName = mapName;
-		mapName = "Garden";
 		gradient = 0;
-		loadMap(mapName);
+		loadMap();
 		
 		setVisible(true);
 	}
 	
-	public void loadMap(String pathname) {
+	public void loadMap() {
 		try {
-			map = ImageIO.read(new File(mapName));
+			map = ImageIO.read(new File("./images/maps/"+mapName+".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public void addWorm(Worm w) {
+		registerWormController(w);
 		worms.add(w);
 	}
 	
+	private void registerWormController(Worm w) {
+		wormControllers.add(new WormController(w,this));
+	}
+
 	public BufferedImage getMap() {
 		return map;
 	}
 	
 	public void update() {
-		this.repaint();
+		repaint();
 	}
 	
 	public void eatEarth(Point p) {
@@ -60,15 +67,19 @@ public class Map extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		
-		g.drawImage(getMap(), 0, 0, getMap().getWidth(), getMap().getHeight(), null);
+		g.drawImage(getMap(), 0, 0, getWidth(), getHeight(), null);
 		
 		for(Point p: eatenEarth) {
-			g.drawOval(p.x, p.y, 1, 1);
+			g.drawOval(p.x+17, p.y+25, 10, 10);
 		}
 		
 		for(Worm w : worms) {
 			g.drawImage(w.getImage(), w.getPosition().x, w.getPosition().y, 
-					w.getImage().getWidth(), w.getImage().getHeight(), null);
+						w.getImage().getWidth(), w.getImage().getHeight(), null);
 		}
+	}
+	
+	public WormController getController(Worm worm) {
+		return wormControllers.get(0);
 	}
 }

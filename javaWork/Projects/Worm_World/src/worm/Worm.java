@@ -16,18 +16,16 @@ public class Worm {
 	protected short power;
 	protected ArrayList<Item> items;
 	protected Point position;
-	protected WormController controller;
 	protected BufferedImage image = null;
 	
 	public Worm(String username, String wormType) {
 		this.userName = username;
 		this.wormType = wormType;
 		items = new ArrayList<Item>();
-		position = new Point(50,50);
-		controller = new WormController(this);
+		position = new Point(250,250);
 		
 		try {
-			image = ImageIO.read(new File(wormType));
+			image = ImageIO.read(new File("./images/worms/"+wormType+".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -66,9 +64,5 @@ public class Worm {
 	public BufferedImage getImage() {
 		// TODO Auto-generated method stub
 		return image;
-	}
-	
-	public WormController getController() {
-		return controller;
 	}
 }
