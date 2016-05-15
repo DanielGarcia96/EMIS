@@ -9,10 +9,12 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 
 import worm.Worm;
 import worm.WormController;
 
+@SuppressWarnings("serial")
 public class Map extends JPanel {
 	protected ArrayList<Worm> worms;
 	protected ArrayList<WormController> wormControllers;
@@ -69,6 +71,17 @@ public class Map extends JPanel {
 		
 		g.drawImage(getMap(), 0, 0, getWidth(), getHeight(), null);
 		
+		for(int i = 0; i < eatenEarth.size(); i++) {
+			int y = 0;
+			int x = 0;
+			try {
+				x = eatenEarth.get(i).x+17;
+				y = eatenEarth.get(i).y+25;
+			}catch(ConcurrentModificationException e) {
+				e.printStackTrace();
+			}
+			g.drawOval(x, y, 10, 10);
+		}
 		for(Point p: eatenEarth) {
 			g.drawOval(p.x+17, p.y+25, 10, 10);
 		}

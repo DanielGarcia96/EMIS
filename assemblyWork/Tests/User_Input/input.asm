@@ -22,7 +22,7 @@ _start:                ;User prompt
    mov eax, 3
    mov ebx, 2
    mov ecx, num
-   mov edx, 5          ;5 bytes (numeric, 1 for sign) of that information
+   mov edx, 5          ; 5 bytes (numeric, 1 for sign) of that information
    int 80h
 
 
@@ -31,6 +31,20 @@ _start:                ;User prompt
    mov ebx, 1
    mov ecx, dispMsg
    mov edx, lenDispMsg
+   int 80h
+
+   ;Output the stored number
+   mov eax, 4
+   mov ebx, 1
+   mov ecx, num
+   mov edx, 5
+   int 80h
+
+   ;Output a newline
+   mov eax, 4
+   mov ebx, 1
+   mov ecx, 0x0A
+   mov edx, 1
    int 80h
 
    ;Exit code

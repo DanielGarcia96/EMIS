@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use warnings;
+
+$count = 0;
+while(<>){
+   print "$count $_";
+   $count++;
+}

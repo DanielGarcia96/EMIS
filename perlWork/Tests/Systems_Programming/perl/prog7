@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use File::Basename;
+
+$newname = shift;
+while($_ = shift) {
+    ($name, $path, $ext) = fileparse($_, '\..*');
+    print "mv $_ $path$newname$ext\n";
+}

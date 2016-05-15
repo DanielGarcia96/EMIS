@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+
+use warnings;
+use Cwd;
+use Cwd 'abs_path';
+
+while($_ = shift) {
+    walk_dir(abs_path($_));
+}
+
+sub walk_dir {
+    my $parent = shift @_;
+    opendir(my $DH, $parent);
+    while(readdir($DH)) {
+        next if $_ eq "." or $_ eq "..";
+        $fname = "$parent/$_";
+        if(-d $fname) {
+            walk_dir($fname);
+            next;
+        }
+        if($fname =~ /\/core$/) {
+            print "rm $fname\n";
+        }
+    }
+    closedir($DH);
+}

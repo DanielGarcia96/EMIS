@@ -1,13 +1,12 @@
 package core;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 
 import map.*;
 import worm.*;
-
+ 
+@SuppressWarnings("serial")
 public class Main extends JFrame {
 	public Map map;
 	public Worm worm;
@@ -24,11 +23,11 @@ public class Main extends JFrame {
 		addKeyListener(map.getController(worm));
 		
 		add(map, BorderLayout.CENTER);
-		pack();
 		setVisible(true);
 	}
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		Main m = new Main();
 	}
 

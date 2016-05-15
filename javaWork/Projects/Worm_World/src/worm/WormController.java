@@ -2,6 +2,7 @@ package worm;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ConcurrentModificationException;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TimerTask;
@@ -50,22 +51,33 @@ public class WormController implements KeyListener {
 			if(!pressedKeys.isEmpty()){
                 Iterator<Integer> i = pressedKeys.iterator();
                 while(i.hasNext()){
-                	int compare = i.next().intValue();
+                	int compare = 0;
+                	try {
+                		compare = i.next().intValue();
+                	}catch(ConcurrentModificationException e) {
+                		e.printStackTrace();
+                	}
                 	switch(compare) {
                 		case 'W':
+                			if (thisWorm.getPosition().getY() <= 64)
+                				break;
                 			thisWorm.changePosition(thisWorm.getPosition().getX(), thisWorm.getPosition().getY()-1);
+                			System.out.println(thisWorm.getPosition());
                 			map.eatEarth(thisWorm.getPosition());
                 			break;
                 		case 'S':
                 			thisWorm.changePosition(thisWorm.getPosition().getX(), thisWorm.getPosition().getY()+1);
+                			System.out.println(thisWorm.getPosition());
                 			map.eatEarth(thisWorm.getPosition());
                 			break;
                 		case 'A':
                 			thisWorm.changePosition(thisWorm.getPosition().getX()-1, thisWorm.getPosition().getY());
+                			System.out.println(thisWorm.getPosition());
                 			map.eatEarth(thisWorm.getPosition());
                 			break;
                 		case 'D':
                 			thisWorm.changePosition(thisWorm.getPosition().getX()+1, thisWorm.getPosition().getY());
+                			System.out.println(thisWorm.getPosition());
                 			map.eatEarth(thisWorm.getPosition());
                 			break;
                 	}
