@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int countCollatz(int start);
 
@@ -22,13 +23,13 @@ int main(int argc, char *argv[])
 int countCollatz(int start)
 {
     int count = 0;
-    while(start != 1){
-        if(start%2)
-            start /= 2;
+    long long rstart = start;
+    while(rstart > 1){
+        if(rstart % 2 == 1)
+            rstart = (3 * rstart) + 1;
         else
-            start = (3*start) + 1;
+            rstart =  rstart/2;
         count++;
     }
-
     return count;
 }
