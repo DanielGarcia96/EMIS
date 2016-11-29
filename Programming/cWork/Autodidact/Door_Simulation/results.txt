@@ -1,6 +1,0 @@
-Amount of rounds: Same door strategy:
-Wins: 33538
-Losses: 66462
-Change door strategy:
-Wins: 44318
-Losses: 55682

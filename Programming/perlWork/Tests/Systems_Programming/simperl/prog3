@@ -1,8 +1,0 @@
-#!/usr/bin/perl
-
-use warnings;
-
-while(<>){
-    @array = split(/:/, $_);
-    print "$array[0] $array[4]\n";
-}

@@ -1,4 +1,0 @@
-1. Matches anything between hello and world
-2. Matches one or more digits at the beginning of the line followed by a single whitespace, ending with zero or more word characters till the end of the line.
-3. Matches a capital letter in front of punctuation or whitespace or at the beginning of the line, followed by zero or more lower case letters till the next punctuation or whitespace.
-4. Matches any character, followed zero or more characters till the first character that was matched is encountered.

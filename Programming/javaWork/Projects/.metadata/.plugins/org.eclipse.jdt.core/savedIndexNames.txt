@@ -1,1 +1,0 @@
-INDEX VERSION 1.126+/home/daniel/Programming/javaWork/Projects/.metadata/.plugins/org.eclipse.jdt.core
