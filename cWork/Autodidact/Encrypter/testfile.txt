@@ -1,5 +1,0 @@
-This is a test file
-I like this test file
-Hopefully it's encrypted
-Or decrypted
-Whatever I want really

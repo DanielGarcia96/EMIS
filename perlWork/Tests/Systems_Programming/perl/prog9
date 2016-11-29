@@ -1,7 +1,0 @@
-#!/usr/bin/perl
-
-while(<>){
-    if(s/^.*User-Name = (.*)/\1/){
-        print $_;
-    }
-}
