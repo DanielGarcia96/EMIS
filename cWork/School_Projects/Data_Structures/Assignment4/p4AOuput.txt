@@ -1,0 +1,807 @@
+TIME WIDGET EVENT
+   0     1  Arrived
+   0     1  Enter Queue 1
+   0     1  Leave Queue 1, waited 0
+   0     1  Seized  Server 1
+  13     2  Arrived
+  13     2  Enter Queue 1
+  13     2  Leave Queue 1, waited 0
+  13     2  Seized  Server 1
+  28     1  Released Server 1
+  28     1  Enter Queue 2
+  29     3  Arrived
+  29     3  Enter Queue 1
+  29     3  Leave Queue 1, waited 0
+  29     1  Leave Queue 2, waited 1
+  29     3  Seized  Server 1
+  29     1  Seized  Server 2
+  41     2  Arrived
+  41     2  Enter Queue 1
+  48     4  Arrived
+  48     4  Enter Queue 1
+  53     5  Arrived
+  53     5  Enter Queue 1
+  54     3  Released Server 1
+  54     3  Enter Queue 2
+  57     3  Arrived
+  57     3  Enter Queue 1
+  57     3  Leave Queue 2, waited 3
+  57     3  Seized  Server 2
+  57     1  Released Server 2
+  57     1  Exit System, in system 57
+  59     2  Released Server 2
+  59     2  Exit System, in system 46
+  60     6  Arrived
+  60     6  Enter Queue 1
+  60     2  Leave Queue 1, waited 19
+  60     2  Seized  Server 1
+  73     4  Arrived
+  73     4  Enter Queue 1
+  73     4  Leave Queue 1, waited 25
+  73     4  Seized  Server 1
+  74     7  Arrived
+  74     7  Enter Queue 1
+  74     5  Leave Queue 1, waited 21
+  74     5  Seized  Server 1
+  76     4  Arrived
+  76     4  Enter Queue 1
+  76     3  Leave Queue 1, waited 19
+  76     3  Seized  Server 1
+  78     5  Arrived
+  78     5  Enter Queue 1
+  78     6  Leave Queue 1, waited 18
+  78     6  Seized  Server 1
+  81     5  Arrived
+  81     5  Enter Queue 1
+  81     4  Leave Queue 1, waited 8
+  81     4  Seized  Server 1
+  82     3  Released Server 2
+  82     3  Exit System, in system 53
+  83     8  Arrived
+  83     8  Enter Queue 1
+  83     7  Leave Queue 1, waited 9
+  83     7  Seized  Server 1
+  85     6  Arrived
+  85     6  Enter Queue 1
+  85     4  Leave Queue 1, waited 9
+  85     4  Seized  Server 1
+  88     6  Arrived
+  88     6  Enter Queue 1
+  88     5  Leave Queue 1, waited 10
+  88     5  Seized  Server 1
+  89     9  Arrived
+  89     9  Enter Queue 1
+  89     5  Leave Queue 1, waited 8
+  89     5  Seized  Server 1
+  95     4  Released Server 2
+  95     4  Exit System, in system 47
+  97     5  Released Server 2
+  97     5  Exit System, in system 44
+  99     7  Arrived
+  99     7  Enter Queue 1
+  99     8  Leave Queue 1, waited 16
+  99     8  Seized  Server 1
+ 101    10  Arrived
+ 101    10  Enter Queue 1
+ 101     6  Leave Queue 1, waited 16
+ 101     6  Seized  Server 1
+ 101     3  Released Server 2
+ 101     3  Exit System, in system 44
+ 102     7  Arrived
+ 102     7  Enter Queue 1
+ 102     6  Leave Queue 1, waited 14
+ 102     6  Seized  Server 1
+ 103     4  Released Server 2
+ 103     4  Exit System, in system 30
+ 106     2  Released Server 1
+ 106     2  Enter Queue 2
+ 107     4  Released Server 2
+ 107     4  Exit System, in system 31
+ 108     8  Arrived
+ 108     8  Enter Queue 1
+ 108     9  Leave Queue 1, waited 19
+ 108     2  Leave Queue 2, waited 2
+ 108     9  Seized  Server 1
+ 108     2  Seized  Server 2
+ 109    11  Arrived
+ 109    11  Enter Queue 1
+ 111     8  Arrived
+ 111     8  Enter Queue 1
+ 111     5  Released Server 2
+ 111     5  Exit System, in system 33
+ 112     5  Released Server 2
+ 112     5  Exit System, in system 31
+ 114     9  Arrived
+ 114     9  Enter Queue 1
+ 114     7  Leave Queue 1, waited 15
+ 114     7  Seized  Server 1
+ 117     9  Arrived
+ 117     9  Enter Queue 1
+ 117    10  Leave Queue 1, waited 16
+ 117    10  Seized  Server 1
+ 117    12  Arrived
+ 117    12  Enter Queue 1
+ 117     7  Leave Queue 1, waited 15
+ 117     7  Seized  Server 1
+ 121    13  Arrived
+ 121    13  Enter Queue 1
+ 121     8  Leave Queue 1, waited 13
+ 121     8  Seized  Server 1
+ 122     3  Arrived
+ 122     3  Enter Queue 1
+ 122    11  Leave Queue 1, waited 13
+ 122    11  Seized  Server 1
+ 122     8  Released Server 2
+ 122     8  Exit System, in system 39
+ 125    14  Arrived
+ 125    14  Enter Queue 1
+ 125     8  Leave Queue 1, waited 14
+ 125     8  Seized  Server 1
+ 126    10  Arrived
+ 126    10  Enter Queue 1
+ 126     9  Leave Queue 1, waited 12
+ 126     9  Seized  Server 1
+ 126     7  Released Server 2
+ 126     7  Exit System, in system 52
+ 127     6  Released Server 2
+ 127     6  Exit System, in system 67
+ 129    10  Arrived
+ 129    10  Enter Queue 1
+ 129     9  Leave Queue 1, waited 12
+ 129     9  Seized  Server 1
+ 134    11  Arrived
+ 134    11  Enter Queue 1
+ 134    12  Leave Queue 1, waited 17
+ 134    12  Seized  Server 1
+ 137    11  Arrived
+ 137    11  Enter Queue 1
+ 137    13  Leave Queue 1, waited 16
+ 137    13  Seized  Server 1
+ 141     4  Arrived
+ 141     4  Enter Queue 1
+ 141     3  Leave Queue 1, waited 19
+ 141     3  Seized  Server 1
+ 142    12  Arrived
+ 142    12  Enter Queue 1
+ 142    14  Leave Queue 1, waited 17
+ 142    14  Seized  Server 1
+ 143    15  Arrived
+ 143    15  Enter Queue 1
+ 143    10  Leave Queue 1, waited 17
+ 143    10  Seized  Server 1
+ 144     8  Released Server 2
+ 144     8  Exit System, in system 36
+ 144     9  Released Server 1
+ 144     9  Enter Queue 2
+ 145    12  Arrived
+ 145    12  Enter Queue 1
+ 145    10  Leave Queue 1, waited 16
+ 145     9  Leave Queue 2, waited 1
+ 145    10  Seized  Server 1
+ 145     9  Seized  Server 2
+ 146    13  Arrived
+ 146    13  Enter Queue 1
+ 146     5  Arrived
+ 146     5  Enter Queue 1
+ 148     8  Released Server 2
+ 148     8  Exit System, in system 37
+ 149    13  Arrived
+ 149    13  Enter Queue 1
+ 149    11  Leave Queue 1, waited 15
+ 149    11  Seized  Server 1
+ 150    14  Arrived
+ 150    14  Enter Queue 1
+ 150    11  Leave Queue 1, waited 13
+ 150    11  Seized  Server 1
+ 150     6  Released Server 2
+ 150     6  Exit System, in system 65
+ 151     6  Released Server 2
+ 151     6  Exit System, in system 63
+ 153    14  Arrived
+ 153    14  Enter Queue 1
+ 153     4  Leave Queue 1, waited 12
+ 153     4  Seized  Server 1
+ 153     6  Arrived
+ 153     6  Enter Queue 1
+ 153    12  Leave Queue 1, waited 11
+ 153    12  Seized  Server 1
+ 154     2  Released Server 2
+ 154     2  Exit System, in system 113
+ 155    16  Arrived
+ 155    16  Enter Queue 1
+ 155    15  Leave Queue 1, waited 12
+ 155    15  Seized  Server 1
+ 156    10  Arrived
+ 156    10  Enter Queue 1
+ 156    12  Leave Queue 1, waited 11
+ 156    12  Seized  Server 1
+ 157    12  Released Server 2
+ 157    12  Exit System, in system 40
+ 157     7  Released Server 2
+ 157     7  Exit System, in system 58
+ 159    17  Arrived
+ 159    17  Enter Queue 1
+ 159    13  Leave Queue 1, waited 13
+ 159    13  Seized  Server 1
+ 160     7  Released Server 2
+ 160     7  Exit System, in system 58
+ 162     9  Released Server 2
+ 162     9  Exit System, in system 48
+ 163    10  Released Server 2
+ 163    10  Exit System, in system 62
+ 164    11  Arrived
+ 164    11  Enter Queue 1
+ 164     5  Leave Queue 1, waited 18
+ 164     5  Seized  Server 1
+ 165     9  Released Server 2
+ 165     9  Exit System, in system 48
+ 166     3  Released Server 2
+ 166     3  Exit System, in system 44
+ 166    11  Released Server 2
+ 166    11  Exit System, in system 57
+ 167     7  Arrived
+ 167     7  Enter Queue 1
+ 167    13  Leave Queue 1, waited 18
+ 167    13  Seized  Server 1
+ 167    14  Released Server 2
+ 167    14  Exit System, in system 42
+ 168    15  Arrived
+ 168    15  Enter Queue 1
+ 168    14  Leave Queue 1, waited 18
+ 168    14  Seized  Server 1
+ 170    18  Arrived
+ 170    18  Enter Queue 1
+ 170    14  Leave Queue 1, waited 17
+ 170    14  Seized  Server 1
+ 171    15  Arrived
+ 171    15  Enter Queue 1
+ 171     6  Leave Queue 1, waited 18
+ 171     6  Seized  Server 1
+ 172    12  Arrived
+ 172    12  Enter Queue 1
+ 172    16  Leave Queue 1, waited 17
+ 172    16  Seized  Server 1
+ 175     4  Released Server 2
+ 175     4  Exit System, in system 34
+ 176    13  Arrived
+ 176    13  Enter Queue 1
+ 176    10  Leave Queue 1, waited 20
+ 176    10  Seized  Server 1
+ 176     8  Arrived
+ 176     8  Enter Queue 1
+ 176    17  Leave Queue 1, waited 17
+ 176    17  Seized  Server 1
+ 176    12  Released Server 2
+ 176    12  Exit System, in system 34
+ 179    12  Released Server 2
+ 179    12  Exit System, in system 34
+ 180    14  Arrived
+ 180    14  Enter Queue 1
+ 180    11  Leave Queue 1, waited 16
+ 180    11  Seized  Server 1
+ 180    16  Arrived
+ 180    16  Enter Queue 1
+ 180     7  Leave Queue 1, waited 13
+ 180     7  Seized  Server 1
+ 181     9  Released Server 2
+ 181     9  Exit System, in system 92
+ 182     9  Arrived
+ 182     9  Enter Queue 1
+ 182    15  Leave Queue 1, waited 14
+ 182    15  Seized  Server 1
+ 183    16  Arrived
+ 183    16  Enter Queue 1
+ 183    18  Leave Queue 1, waited 13
+ 183    18  Seized  Server 1
+ 184    17  Arrived
+ 184    17  Enter Queue 1
+ 184    15  Leave Queue 1, waited 13
+ 184    15  Seized  Server 1
+ 184    13  Released Server 2
+ 184    13  Exit System, in system 63
+ 186    15  Released Server 2
+ 186    15  Exit System, in system 43
+ 187    17  Arrived
+ 187    17  Enter Queue 1
+ 187    12  Leave Queue 1, waited 15
+ 187    12  Seized  Server 1
+ 187     5  Released Server 2
+ 187     5  Exit System, in system 41
+ 188    19  Arrived
+ 188    19  Enter Queue 1
+ 188    13  Leave Queue 1, waited 12
+ 188    13  Seized  Server 1
+ 189    10  Released Server 2
+ 189    10  Exit System, in system 63
+ 191    10  Released Server 1
+ 191    10  Enter Queue 2
+ 193    14  Released Server 2
+ 193    14  Exit System, in system 43
+ 193    11  Released Server 2
+ 193    11  Exit System, in system 59
+ 194    10  Arrived
+ 194    10  Enter Queue 1
+ 194     8  Leave Queue 1, waited 18
+ 194    10  Leave Queue 2, waited 3
+ 194     8  Seized  Server 1
+ 194    10  Seized  Server 2
+ 194    11  Released Server 2
+ 194    11  Exit System, in system 57
+ 195    18  Arrived
+ 195    18  Enter Queue 1
+ 195    14  Leave Queue 1, waited 15
+ 195    14  Seized  Server 1
+ 195    14  Released Server 2
+ 195    14  Exit System, in system 42
+ 196    20  Arrived
+ 196    20  Enter Queue 1
+ 196    16  Leave Queue 1, waited 16
+ 196    16  Seized  Server 1
+ 197    21  Arrived
+ 197    21  Enter Queue 1
+ 197     9  Leave Queue 1, waited 15
+ 197     9  Seized  Server 1
+ 198    18  Arrived
+ 198    18  Enter Queue 1
+ 198    16  Leave Queue 1, waited 15
+ 198    16  Seized  Server 1
+ 198    15  Arrived
+ 198    15  Enter Queue 1
+ 198    17  Leave Queue 1, waited 14
+ 198    17  Seized  Server 1
+ 199    11  Arrived
+ 199    11  Enter Queue 1
+ 199    17  Leave Queue 1, waited 12
+ 199    17  Seized  Server 1
+ 202    11  Arrived
+ 202    11  Enter Queue 1
+ 202    19  Leave Queue 1, waited 14
+ 202    19  Seized  Server 1
+ 203    16  Released Server 2
+ 203    16  Exit System, in system 48
+ 206    17  Released Server 2
+ 206    17  Exit System, in system 47
+ 206    13  Released Server 2
+ 206    13  Exit System, in system 60
+ 207    12  Arrived
+ 207    12  Enter Queue 1
+ 207    10  Leave Queue 1, waited 13
+ 207    10  Seized  Server 1
+ 210    12  Arrived
+ 210    12  Enter Queue 1
+ 210    18  Leave Queue 1, waited 15
+ 210    18  Seized  Server 1
+ 210    16  Arrived
+ 210    16  Enter Queue 1
+ 210    20  Leave Queue 1, waited 14
+ 210    20  Seized  Server 1
+ 210    12  Released Server 2
+ 210    12  Exit System, in system 38
+ 211    13  Arrived
+ 211    13  Enter Queue 1
+ 211    21  Leave Queue 1, waited 14
+ 211    21  Seized  Server 1
+ 211    22  Arrived
+ 211    22  Enter Queue 1
+ 211    18  Leave Queue 1, waited 13
+ 211    18  Seized  Server 1
+ 213    19  Arrived
+ 213    19  Enter Queue 1
+ 213    15  Leave Queue 1, waited 15
+ 213    15  Seized  Server 1
+ 213    15  Released Server 2
+ 213    15  Exit System, in system 45
+ 214    17  Arrived
+ 214    17  Enter Queue 1
+ 214    11  Leave Queue 1, waited 15
+ 214    11  Seized  Server 1
+ 214    13  Arrived
+ 214    13  Enter Queue 1
+ 214    11  Leave Queue 1, waited 12
+ 214    11  Seized  Server 1
+ 214    13  Released Server 2
+ 214    13  Exit System, in system 65
+ 215    14  Arrived
+ 215    14  Enter Queue 1
+ 215    12  Leave Queue 1, waited 8
+ 215    12  Seized  Server 1
+ 215    15  Released Server 2
+ 215    15  Exit System, in system 44
+ 216    19  Arrived
+ 216    19  Enter Queue 1
+ 216    12  Leave Queue 1, waited 6
+ 216    12  Seized  Server 1
+ 217     8  Released Server 1
+ 217     8  Enter Queue 2
+ 218    14  Arrived
+ 218    14  Enter Queue 1
+ 218    16  Leave Queue 1, waited 8
+ 218     8  Leave Queue 2, waited 1
+ 218    16  Seized  Server 1
+ 218     8  Seized  Server 2
+ 220    14  Released Server 2
+ 220    14  Exit System, in system 40
+ 220     6  Released Server 2
+ 220     6  Exit System, in system 67
+ 221    20  Arrived
+ 221    20  Enter Queue 1
+ 221    13  Leave Queue 1, waited 10
+ 221    13  Seized  Server 1
+ 222    21  Arrived
+ 222    21  Enter Queue 1
+ 222    22  Leave Queue 1, waited 11
+ 222    22  Seized  Server 1
+ 222    10  Released Server 2
+ 222    10  Exit System, in system 66
+ 223     9  Arrived
+ 223     9  Enter Queue 1
+ 223    19  Leave Queue 1, waited 10
+ 223    19  Seized  Server 1
+ 223    18  Released Server 2
+ 223    18  Exit System, in system 53
+ 223     7  Released Server 2
+ 223     7  Exit System, in system 56
+ 224    20  Arrived
+ 224    20  Enter Queue 1
+ 224    17  Leave Queue 1, waited 10
+ 224    17  Seized  Server 1
+ 224    23  Arrived
+ 224    23  Enter Queue 1
+ 224    13  Leave Queue 1, waited 10
+ 224    13  Seized  Server 1
+ 224    11  Released Server 2
+ 224    11  Exit System, in system 60
+ 225    21  Arrived
+ 225    21  Enter Queue 1
+ 225    14  Leave Queue 1, waited 10
+ 225    14  Seized  Server 1
+ 225    18  Arrived
+ 225    18  Enter Queue 1
+ 225    19  Leave Queue 1, waited 9
+ 225    19  Seized  Server 1
+ 227    16  Released Server 2
+ 227    16  Exit System, in system 47
+ 228    17  Released Server 2
+ 228    17  Exit System, in system 44
+ 229    17  Released Server 2
+ 229    17  Exit System, in system 42
+ 229    16  Released Server 2
+ 229    16  Exit System, in system 46
+ 230    19  Released Server 2
+ 230    19  Exit System, in system 42
+ 231    24  Arrived
+ 231    24  Enter Queue 1
+ 231    14  Leave Queue 1, waited 13
+ 231    14  Seized  Server 1
+ 233    15  Arrived
+ 233    15  Enter Queue 1
+ 233    20  Leave Queue 1, waited 12
+ 233    20  Seized  Server 1
+ 233     9  Released Server 2
+ 233     9  Exit System, in system 51
+ 235    10  Arrived
+ 235    10  Enter Queue 1
+ 235    21  Leave Queue 1, waited 13
+ 235    21  Seized  Server 1
+ 235    13  Released Server 2
+ 235    13  Exit System, in system 59
+ 236    22  Arrived
+ 236    22  Enter Queue 1
+ 236     9  Leave Queue 1, waited 13
+ 236     9  Seized  Server 1
+ 236    15  Arrived
+ 236    15  Enter Queue 1
+ 236    20  Leave Queue 1, waited 12
+ 236    20  Seized  Server 1
+ 238    12  Released Server 2
+ 238    12  Exit System, in system 31
+ 239    22  Arrived
+ 239    22  Enter Queue 1
+ 239    23  Leave Queue 1, waited 15
+ 239    23  Seized  Server 1
+ 239    12  Released Server 2
+ 239    12  Exit System, in system 29
+ 239    20  Released Server 2
+ 239    20  Exit System, in system 43
+ 240    10  Released Server 2
+ 240    10  Exit System, in system 111
+ 241     8  Released Server 2
+ 241     8  Exit System, in system 65
+ 241    21  Released Server 2
+ 241    21  Exit System, in system 44
+ 243    11  Arrived
+ 243    11  Enter Queue 1
+ 243    21  Leave Queue 1, waited 18
+ 243    21  Seized  Server 1
+ 243    25  Arrived
+ 243    25  Enter Queue 1
+ 243    18  Leave Queue 1, waited 18
+ 243    18  Seized  Server 1
+ 243    19  Arrived
+ 243    19  Enter Queue 1
+ 243    24  Leave Queue 1, waited 12
+ 243    24  Seized  Server 1
+ 244    15  Released Server 2
+ 244    15  Exit System, in system 46
+ 245    16  Arrived
+ 245    16  Enter Queue 1
+ 245    15  Leave Queue 1, waited 12
+ 245    15  Seized  Server 1
+ 248    16  Arrived
+ 248    16  Enter Queue 1
+ 248    10  Leave Queue 1, waited 13
+ 248    10  Seized  Server 1
+ 249    17  Arrived
+ 249    17  Enter Queue 1
+ 249    22  Leave Queue 1, waited 13
+ 249    22  Seized  Server 1
+ 249    23  Arrived
+ 249    23  Enter Queue 1
+ 249    15  Leave Queue 1, waited 13
+ 249    15  Seized  Server 1
+ 249    16  Released Server 1
+ 249    16  Enter Queue 2
+ 250    14  Released Server 2
+ 250    14  Exit System, in system 35
+ 250    18  Released Server 2
+ 250    18  Exit System, in system 55
+ 251    20  Arrived
+ 251    20  Enter Queue 1
+ 251    22  Leave Queue 1, waited 12
+ 251    16  Leave Queue 2, waited 2
+ 251    22  Seized  Server 1
+ 251    16  Seized  Server 2
+ 251    12  Arrived
+ 251    12  Enter Queue 1
+ 251    19  Released Server 2
+ 251    19  Exit System, in system 38
+ 251    18  Released Server 2
+ 251    18  Exit System, in system 53
+ 252    21  Arrived
+ 252    21  Enter Queue 1
+ 252    11  Leave Queue 1, waited 9
+ 252    11  Seized  Server 1
+ 252    17  Arrived
+ 252    17  Enter Queue 1
+ 252    25  Leave Queue 1, waited 9
+ 252    25  Seized  Server 1
+ 252    23  Arrived
+ 252    23  Enter Queue 1
+ 252    19  Leave Queue 1, waited 9
+ 252    19  Seized  Server 1
+ 253    17  Arrived
+ 253    17  Enter Queue 1
+ 253    16  Leave Queue 1, waited 8
+ 253    16  Seized  Server 1
+ 253    26  Arrived
+ 253    26  Enter Queue 1
+ 253    16  Leave Queue 1, waited 5
+ 253    16  Seized  Server 1
+ 253    27  Arrived
+ 253    27  Enter Queue 1
+ 253    17  Leave Queue 1, waited 4
+ 253    17  Seized  Server 1
+ 253    19  Released Server 2
+ 253    19  Exit System, in system 37
+ 253    22  Released Server 2
+ 253    22  Exit System, in system 42
+ 253    10  Released Server 2
+ 253    10  Exit System, in system 59
+ 254    17  Released Server 2
+ 254    17  Exit System, in system 40
+ 255    13  Arrived
+ 255    13  Enter Queue 1
+ 255    23  Leave Queue 1, waited 6
+ 255    23  Seized  Server 1
+ 256    24  Arrived
+ 256    24  Enter Queue 1
+ 256    20  Leave Queue 1, waited 5
+ 256    20  Seized  Server 1
+ 256    14  Released Server 2
+ 256    14  Exit System, in system 38
+ 258    11  Released Server 2
+ 258    11  Exit System, in system 56
+ 258    11  Released Server 2
+ 258    11  Exit System, in system 59
+ 259    14  Arrived
+ 259    14  Enter Queue 1
+ 259    12  Leave Queue 1, waited 8
+ 259    12  Seized  Server 1
+ 259    24  Arrived
+ 259    24  Enter Queue 1
+ 259    21  Leave Queue 1, waited 7
+ 259    21  Seized  Server 1
+ 260    18  Arrived
+ 260    18  Enter Queue 1
+ 260    17  Leave Queue 1, waited 8
+ 260    17  Seized  Server 1
+ 262    20  Released Server 2
+ 262    20  Exit System, in system 41
+ 263    18  Arrived
+ 263    18  Enter Queue 1
+ 263    23  Leave Queue 1, waited 11
+ 263    23  Seized  Server 1
+ 264    18  Arrived
+ 264    18  Enter Queue 1
+ 264    17  Leave Queue 1, waited 11
+ 264    17  Seized  Server 1
+ 265    20  Released Server 2
+ 265    20  Exit System, in system 41
+ 265    21  Released Server 2
+ 265    21  Exit System, in system 43
+ 266    22  Arrived
+ 266    22  Enter Queue 1
+ 266    26  Leave Queue 1, waited 13
+ 266    26  Seized  Server 1
+ 268    25  Arrived
+ 268    25  Enter Queue 1
+ 268    27  Leave Queue 1, waited 15
+ 268    27  Seized  Server 1
+ 268    28  Arrived
+ 268    28  Enter Queue 1
+ 268    13  Leave Queue 1, waited 13
+ 268    13  Seized  Server 1
+ 268    13  Released Server 2
+ 268    13  Exit System, in system 57
+ 271    25  Arrived
+ 271    25  Enter Queue 1
+ 271    24  Leave Queue 1, waited 15
+ 271    24  Seized  Server 1
+ 271    13  Released Server 2
+ 271    13  Exit System, in system 57
+ 272    29  Arrived
+ 272    29  Enter Queue 1
+ 272    14  Leave Queue 1, waited 13
+ 272    14  Seized  Server 1
+ 272     9  Released Server 2
+ 272     9  Exit System, in system 49
+ 273    21  Released Server 2
+ 273    21  Exit System, in system 48
+ 276    15  Released Server 2
+ 276    15  Exit System, in system 43
+ 277    15  Arrived
+ 277    15  Enter Queue 1
+ 277    24  Leave Queue 1, waited 18
+ 277    24  Seized  Server 1
+ 278    26  Arrived
+ 278    26  Enter Queue 1
+ 278    18  Leave Queue 1, waited 18
+ 278    18  Seized  Server 1
+ 278    27  Arrived
+ 278    27  Enter Queue 1
+ 278    18  Leave Queue 1, waited 15
+ 278    18  Seized  Server 1
+ 278    19  Arrived
+ 278    19  Enter Queue 1
+ 278    18  Leave Queue 1, waited 14
+ 278    18  Seized  Server 1
+ 278    23  Released Server 2
+ 278    23  Exit System, in system 54
+ 279    23  Arrived
+ 279    23  Enter Queue 1
+ 279    22  Leave Queue 1, waited 13
+ 279    22  Seized  Server 1
+ 280    19  Released Server 2
+ 280    19  Exit System, in system 37
+ 280    15  Released Server 2
+ 280    15  Exit System, in system 44
+ 280    22  Released Server 2
+ 280    22  Exit System, in system 44
+ 281    26  Arrived
+ 281    26  Enter Queue 1
+ 281    25  Leave Queue 1, waited 13
+ 281    25  Seized  Server 1
+ 281    27  Arrived
+ 281    27  Enter Queue 1
+ 281    28  Leave Queue 1, waited 13
+ 281    28  Seized  Server 1
+ 281    19  Arrived
+ 281    19  Enter Queue 1
+ 281    25  Leave Queue 1, waited 10
+ 281    25  Seized  Server 1
+ 282    30  Arrived
+ 282    30  Enter Queue 1
+ 282    29  Leave Queue 1, waited 10
+ 282    29  Seized  Server 1
+ 282    19  Arrived
+ 282    19  Enter Queue 1
+ 282    15  Leave Queue 1, waited 5
+ 282    15  Seized  Server 1
+ 282    12  Released Server 2
+ 282    12  Exit System, in system 31
+ 282    16  Released Server 2
+ 282    16  Exit System, in system 72
+ 282    22  Released Server 1
+ 282    22  Enter Queue 2
+ 283    17  Released Server 2
+ 283    17  Exit System, in system 34
+ 283    18  Released Server 2
+ 283    18  Exit System, in system 58
+ 284    16  Released Server 2
+ 284    16  Exit System, in system 36
+ 284    16  Released Server 2
+ 284    16  Exit System, in system 39
+ 284    24  Released Server 2
+ 284    24  Exit System, in system 53
+ 285    20  Released Server 2
+ 285    20  Exit System, in system 34
+ 286    24  Arrived
+ 286    24  Enter Queue 1
+ 286    26  Leave Queue 1, waited 8
+ 286    22  Leave Queue 2, waited 4
+ 286    26  Seized  Server 1
+ 286    22  Seized  Server 2
+ 286    20  Arrived
+ 286    20  Enter Queue 1
+ 287    21  Arrived
+ 287    21  Enter Queue 1
+ 289    20  Arrived
+ 289    20  Enter Queue 1
+ 289    16  Arrived
+ 289    16  Enter Queue 1
+ 289    21  Released Server 2
+ 289    21  Exit System, in system 37
+ 289    25  Released Server 2
+ 289    25  Exit System, in system 46
+ 290    21  Arrived
+ 290    21  Enter Queue 1
+ 290    27  Leave Queue 1, waited 12
+ 290    27  Seized  Server 1
+ 290    20  Arrived
+ 290    20  Enter Queue 1
+ 290    19  Leave Queue 1, waited 12
+ 290    19  Seized  Server 1
+ 290    17  Released Server 2
+ 290    17  Exit System, in system 38
+ 291    21  Arrived
+ 291    21  Enter Queue 1
+ 291    23  Leave Queue 1, waited 12
+ 291    23  Seized  Server 1
+ 293    17  Arrived
+ 293    17  Enter Queue 1
+ 293    26  Leave Queue 1, waited 12
+ 293    26  Seized  Server 1
+ 293    28  Arrived
+ 293    28  Enter Queue 1
+ 293    27  Leave Queue 1, waited 12
+ 293    27  Seized  Server 1
+ 293    26  Released Server 2
+ 293    26  Exit System, in system 40
+ 294    17  Released Server 2
+ 294    17  Exit System, in system 41
+ 294    23  Released Server 2
+ 294    23  Exit System, in system 45
+ 294    10  Released Server 2
+ 294    10  Exit System, in system 59
+ 295    23  Arrived
+ 295    23  Enter Queue 1
+ 295    19  Leave Queue 1, waited 14
+ 295    19  Seized  Server 1
+ 296    28  Arrived
+ 296    28  Enter Queue 1
+ 296    30  Leave Queue 1, waited 14
+ 296    30  Seized  Server 1
+ 296    11  Released Server 2
+ 296    11  Exit System, in system 53
+ 297    29  Arrived
+ 297    29  Enter Queue 1
+ 297    19  Leave Queue 1, waited 15
+ 297    19  Seized  Server 1
+ 297    14  Released Server 2
+ 297    14  Exit System, in system 38
+ 298    25  Arrived
+ 298    25  Enter Queue 1
+ 298    24  Leave Queue 1, waited 12
+ 298    24  Seized  Server 1
+ 298    31  Arrived
+ 298    31  Enter Queue 1
+ 298    20  Leave Queue 1, waited 12
+ 298    20  Seized  Server 1
+ 300    29  Arrived
+ 300    29  Enter Queue 1
+ 300    21  Leave Queue 1, waited 13
+ 300    21  Seized  Server 1
+Widgets Processed: 106
+Average Time in System: 48
+Average Queue Time in Step 1: 11
+Average Queue Time in Step 2: 2

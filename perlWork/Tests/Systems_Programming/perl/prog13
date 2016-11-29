@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+
+$input = 0;
+$output = 0;
+while(<>){
+    if(s/^.*Acct-Input-Packets = (.*)/$1/){
+        $input += $_;
+    }
+    elsif(s/^.*Acct-Output-Packets = (.*)/$1/){
+        $output += $_;
+    }
+}
+
+print "Total Input Bandwidth Usage  = $input packets\n";
+print "Total Output Bandwidth Usage = $output packets\n";

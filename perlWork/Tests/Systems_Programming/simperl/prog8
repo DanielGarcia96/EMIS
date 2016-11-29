@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+
+use warnings;
+use Cwd;
+use Cwd 'abs_path';
+
+$orig = shift;
+$scnd = shift;
+$direct = shift;
+
+foreach(`find $direct`){
+    chop $_;
+    $_ = abs_path($_);
+    if(/\.$orig$/ and -f) {
+        my $newname = $_;
+        $newname =~ s/\.$orig$/\.$scnd/;
+        print "mv $_ ", $newname, "\n";
+    }
+}

@@ -1,0 +1,23 @@
+Time Widget Event
+  0      1  Arrived
+  0      1  Enter Queue 1
+  0	 1  Leave Queue 1, waited 0
+  0	 1  Seized Server 1
+  13	 2  Arrived
+  13     2  Enter Queue 1
+  28     1  Released Server 1
+  28	 1  Exit System, in system 28
+  29     3  Arrived
+  29	 3  Enter Queue 1
+  29     2  Leave Queue 1, waited 15
+  29	 2  Seize Server 1
+  48	 4  Arrived
+  48     4  Enter Queue 1
+  53	 5  Arrived
+  53	 5  Enter Queue 1
+  60	 6  Arrived
+  60	 6  Enter Queue 1
+  74	 7  Arrived
+  74	 7  Enter Queue 1
+  75     2  Release Server 1
+  75	 2  Exit System, in System 22

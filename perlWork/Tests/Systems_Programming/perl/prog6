@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+
+$rexp = shift;
+while($_ = shift) {
+    for(`find $_`) {
+        chop $_;
+        open(FH, $_);
+        while($line = <FH>) {
+            chop $line;
+            if($line =~ /$rexp/ and -T $_) {
+                print "$_:$line\n";
+            }
+        }
+        close(FH);
+    }
+}
