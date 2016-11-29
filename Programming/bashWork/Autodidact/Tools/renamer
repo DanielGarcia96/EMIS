@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -eq 1 ]
+then
+    mv "$1" `echo $1 | sed 's/[][~ )(,-]/_/g' | sed s/\'/_/g | sed s/=/_/g`
+    exit 0
+fi
+
+for i in *
+do
+    mv "$i" `echo $i | sed 's/[][~ )(,-]/_/g' | sed s/\'/_/g | sed s/=/_/g`
+done

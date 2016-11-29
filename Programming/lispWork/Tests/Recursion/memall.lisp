@@ -1,0 +1,11 @@
+(defun MEMALL (atm L)
+   (cond ( (NULL L) NIL )
+         ( (ATOM L) (EQL atm L) )
+         ( T (OR (MEMALL atm (CAR L))
+                 (MEMALL atm (CDR L)) ) )
+   )
+)
+
+( print (MEMALL 'A '( B ( A R ) T )) )
+( print (MEMALL 'Z '( B ( A R ) T )) )
+( print (MEMALL 'T '( B ( A R ) T )) )

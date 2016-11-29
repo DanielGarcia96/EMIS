@@ -1,0 +1,10 @@
+(defun TOTALALL (L)
+   (cond ( (NULL L) 0 )
+         ( (NULL (CAR L)) (+ 0 (TOTALALL(CDR L))) )
+         ( (NOT (ATOM (CAR L))) ( + (TOTALALL(CAR L)) (TOTALALL(CDR L)) ) )
+         ( T ( + (CAR L) (TOTALALL (CDR L)) ) )
+   )
+)
+
+(print (TOTALALL '(1 (2 3) 4)))
+(print (TOTALALL '((1 2) () ((5 10) 15))))

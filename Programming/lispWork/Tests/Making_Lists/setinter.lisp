@@ -1,0 +1,20 @@
+(defun MEMALL (atm L)
+   (cond ( (NULL L) NIL )
+         ( (EQL atm (CAR L)) T)
+         ( (NOT( ATOM (CAR L))) (MEMALL atm (CAR L)) )
+         ( T (MEMALL atm (CDR L)) )
+   )
+)
+
+(defun SETINTER (set1 set2)
+   (cond ( (NULL set1) NIL )
+         ( 
+           (MEMALL (CAR set1) set2) 
+           (CONS (CAR set1) (SETINTER ( CDR set1 ) set2) )
+         )
+         ( T ( SETINTER ( CDR set1) set2 ) )
+   )
+)
+
+(setf intersect (setinter '(x y z) '(v w x z)))
+(format t "~s" intersect)

@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+
+use warnings;
+
+@parentarray = ("");
+while(<>){
+    @array = split(/:/);
+    push(@parentarray, join('', ($array[0], "\t\t", $array[4], "\n")));
+}
+
+print sort @parentarray;

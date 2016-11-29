@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <style>
+            html {
+                /*background-color: #1091bc;*/
+                /*color: #9eb7f7*/
+            }
+            .outer_box {
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                border: 10px solid darkblue;
+                padding: 1%;
+                text-align: center;
+                transform: translate(-50%, -50%);
+            }
+            .action_box {
+                border: 5px solid darkblue;
+                padding: 8%;
+            }
+            p {
+                position: fixed;
+                left: 50%;
+                bottom: 1%;
+                font-size: 10px;
+                text-align: center;
+                transform: translate(-50%, 0%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class=outer_box>
+            <div class=action_box>
+                <h2>Electronic Medical Information System<br><br>Login Page</h2>
+                <form action="" method="post">
+                    Username:<br>
+                    <input name="username" type="text" value="">
+                    <br>
+                    Password:<br>
+                    <input name="passwd" type="password" value="">
+                    <br><br>
+                    <input type="submit" value="Log In">
+                </form>
+            </div>
+        </div>
+<!--        <p>Authored by:<br><br>
+           Asa Sperry,<br>
+           Caleb Mussulman,<br>
+           Daniel Garcia,<br>
+           Jerard Lavel,<br>
+           Porter Cornelius</p>
+-->
+    </body>
+</html>

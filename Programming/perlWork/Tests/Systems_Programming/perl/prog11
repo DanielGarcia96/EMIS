@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+$time = 0;
+while(<>){
+    if(s/^.*Acct-Session-Time = (.*)/\1/){
+        $time += $_;
+    }
+}
+
+print "Total User Session Time = $time\n";

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                background-color: yellow;
+            }
+            #terrify {
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h2 {
+                position: fixed;
+                left: 50%;
+                top: 0%;
+                text-align: center;
+                transform: translate(-50%, 0%);
+                border: 1px solid red;
+            }
+            p {
+                position: fixed;
+                color: blue;
+                left: 50%;
+                bottom: 5%;
+                text-align: center;
+                transform: translate(-50%, 0%);
+            }
+        </style>
+        <title>Moving Image Test</title>
+    </head>
+    <body>
+        <h2>Milana Vayntrub</h2>
+        <img  id="terrify" onmouseover="setAnimatedImage(this)" 
+              onmouseleave="setStaticImage(this)" 
+              src="images/target-0.png"></img>
+        <p>Move your mouse over the image to make it move.</p>
+        <br>
+        <p style="bottom: 0%;">Move your mouse away from the image to keep it still.</p>
+       <script>
+            
+           function setAnimatedImage(x) {
+            x.src = "9f8x6MF.gif";
+           }
+           function setStaticImage(x) {
+            x.src = "images/target-0.png";
+           }
+       </script>
+
+    </body>
+</html>

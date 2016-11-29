@@ -1,0 +1,275 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CS 3733 Operating Systems: Assignment 4</title>
+</head><body>
+<h2>CS 3733 Operating Systems Fall 2016 Assignment 4 </h2>
+<hr>
+
+<h3>Due: Monday, November 21, 2016, at the end of the day</h3>
+<h3>Late Submission: Wednesday, November 23, 2016, at the end of the day</h3>
+<hr>
+
+In the last 2 assignments we will look at solving standard problem
+in three ways.  In this assignment we will develop a serial solution
+to the problem and then extend it to use POSIX threads.
+In Assignment 5 we will use a network of workstations to solve this problem.
+<br>
+<br>
+This assignment has several parts and will be graded on a bases of 30 points.
+The first 4 parts of this assignment will form the basis of Assignment 5,
+so it is important that you get these parts working correctly.
+<br>
+<br>
+
+Learn about the 8-queens problem.  One possible source is
+<a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle"> here</a>.
+You only need to understand the problem, so the first paragraph is sufficient.
+<br>
+<br>
+
+The n-queens problem reduces to finding n unique integers between 1 and n
+(a permutation) such that no two numbers in the list differ by the distance between
+them in the list (the diagonal property).
+The first number in the list is the row number of the queen
+in the first column, the second is the row number of the queen in the second
+column, etc.  The first property ensures that no queen can take another moving
+horizontally or vertically.  The second ensures that no queen can take another
+moving diagonally.  Make sure you understand these statements.
+<br>
+<br>
+
+One inefficient brute-force method of solving this problem is to 
+try all possibilities and check to see if each is a solution.
+To be a solution, the numbers must be a permutation and satisfy the diagonal property.
+<br>
+<br>
+
+We will be a little more clever and generate only permutations
+and check each to see if it satisfies the diagonal property.
+<br>
+<br>
+
+When using a brute force method, it is useful to have a lot a computing
+power at your disposal.  Therefore we will eventually try to do this computation
+in parallel.
+
+Since array indices start at 0, it is simpler to use numbers
+between 0 and n-1 instead of 1 to n.  We can break the problem
+into 2 parts:
+<ul class="noskip">
+<li> Generate all possible permutations of the numbers between 0 and n-1.</li>
+<li> For each, check to see if it satisfies the diagonal property.</li>
+</ul>
+<hr>
+<b>Part 0</b><br>
+Make a new directory for this assignment.  Create a main program that takes a single
+command line parameter, the value of n.  Start by printing your name.
+Call the function:<br>
+<tt>int generate_n_queens_serial(int n, int print_flag)</tt><br>
+This generates all solutions to the n-queens problem and returns the number
+of solutions found.  If the <tt>print_flag</tt> is true, it 
+prints the solutions to standard output, one per line.
+<br>
+<br>
+The first three parts of this assignment are dedicated to writing this function.<br>
+For this part, the function will not actually do anything, and just return 0.<br>
+Put the function in a file called <tt>nqueens_library.c</tt> and create an appropriate
+include file.  Use <tt>make</tt> to compile the code.
+<br>
+<br>
+Test your program.
+<br>
+<br>
+<hr>
+<b>Part 1</b><br>
+In this part we will write half of <tt>generate_n_queens_serial</tt>.<br>
+We will generate all of the permutations.<br>
+All of the functions should be in the <tt>nqueens_library</tt>.
+<br>
+<br>
+Write the  function<br>
+<tt>void get_array_string(int *list, int n, char *s);</tt>
+that fills the last parameter with a string containing the n integers
+in <tt>list</tt>.  Each integer should be right justified in a field of size 4,
+using blanks as separators.
+Include a newline
+at the end and assume that <tt>s</tt> is large enough to hold the result.<br>
+Hint: use <tt>sprintf</tt> in a loop with the appropriate output specification.<br>
+Note that the returned string should represent a single line with
+a newline at the end of the string, not a newline for each integer.
+<br>
+<br>
+Test this by having <tt>generate_n_queens_serial</tt> generate
+the permutation: 0 1 2 3 ... n-1, call <tt>get_array_string</tt>
+and print the result if the flag is appropriate.<br>
+For n=12, the printed string should look like:<br>
+<pre class="noskip">   0   1   2   3   4   5   6   7   8   9  10  11
+</pre>
+<br>
+Find an efficient way to generate all permutations of the integers
+for 0 to n-1.<br>
+For example, you can find an algorithm
+<a href="http://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order">here</a>
+under the topic <b>Generation in lexicographic order</b>.
+<br>
+<br>
+Use this to write a function:<br>
+<tt>int next_permutation(int *list, int n)</tt><br>
+that generates in place the next permutation of size <tt>n</tt>.<br>
+It returns 0 on success and 1 if no more permutations exist.<br>
+The permutations should be generated in lexicographic order.<br>
+The first permutation should be: 0 1 2 3 ... n-1
+<br>
+<br>
+Modify <tt>generate_n_queens_serial</tt> so that it generates
+all permutations.  If the flag is set, for each permutation it
+should call <tt>get_array_string</tt> and print the result.
+The main program should print the count of the number of permutations
+found.
+<br>
+<br>
+Test this  by outputting all permutations for n = 1, 2, 3, 4, and 5.<br>
+Then test this using the flag equal to 0 (so that the permutations are not printed)
+for n = 6, 7, 8, 9, 10, 11, and 12.  In each case the count should be n!.
+Save the output.
+<br>
+<br>
+<hr>
+<b>Part 2</b><br>
+Write the function<br>
+<tt>int check_diagonal(int *list, int n);</tt><br>
+That assumes that <tt>list</tt> contains a permutation of size <tt>n</tt>
+and returns true if it satisfies the diagonal property of the
+n-queens problem.
+<br>
+<br>
+Use this in <tt>generate_n_queens_serial</tt> to find all solutions
+to the n-queens problem.  Print all solutions for n between 1 and 6.
+Print just the count for n between 7 and 12.  Save the output.
+<br>
+<br>
+<hr>
+<b>Part 3</b><br>
+In this part we will prepare to use POSIX threads so that the calculation is
+faster when run on a multi-core machine.<br>
+We will not actually by using threads until Part 4 and we will not include any
+synchronization until later.
+<br>
+<br>
+Write the function<br>
+<tt>int generate_n_queens_serial_one(int n, int out_flag, int first);</tt><br>
+That generates all solutions to the n-queens problems whose first
+value is <tt>first</tt>.  That is, all of the arrays generated have
+<tt>first</tt> as the first element of the array.<br>
+To do this, find the smallest permutation that begins with <tt>first</tt>
+and use that one as a starting point. Continue generating new permutations
+until the first element changes.  Otherwise the function will be similar to
+<tt>generate_n_queens_serial</tt>.
+<br>
+<br>
+Test this by writing a main program that calls this for all possible
+values of <tt>first</tt> and see that it generates all of the
+solutions you found in Part 2.
+<br>
+<br>
+Put the following typedef in your library:<br>
+<pre>typedef struct ti {
+   int n;
+   int first;
+   int out_flag;
+   int result;
+} thread_info_t;
+</pre>
+and write the function:<br>
+<tt>void *queens_thread(void *infopointer)</tt><br>
+that takes a pointer of type <tt>thread_info_t</tt>
+and calls <tt>generate_n_queens_serial_one</tt> with the appropriate
+parameters.  It will store the return value of
+<tt>generate_q_queens_serial</tt> in the <tt>result</tt> field
+and return <tt>NULL</tt>.<br>
+Have <tt>queens_thread</tt> print the value of <tt>first</tt> and
+the number of solutions found all on one line, independent of the
+value of <tt>flag</tt>.
+<br>
+<br>
+Test this by writing a main program that takes <tt>n</tt> as its
+command line parameter and calls <tt>queens_thread</tt> in a loop
+for all possible values of <tt>first</tt>.  It will then
+display the result for each call.
+Run this for the same values on n as in Part 2 and save the output.
+Verify that it gives the same results as your previous programs.
+<br>
+<br>
+<hr>
+<b>Part 4</b><br>
+Write another main program that takes a single command line parameter,
+<tt>n</tt> and creates <tt>n</tt> threads, each of which executes
+<tt>queens_thread</tt> for one value of <tt>first</tt> between 0 and <tt>n-1</tt>.
+Join the threads and output the total number of solutions found.
+Other than the join, do not include any synchronization in this code.
+Test this with values of <tt>n</tt> up to 12 and compare the results with
+your previous solutions.
+<br>
+<br>
+<hr>
+<b>Part 5</b><br>
+In the above program, all of the
+threads are outputting to standard output concurrently.  There is a
+possibility (although it is unlikely) that the output will not be correct
+because the two lines generated by different threads might be interleaved.
+<br>
+<br>
+Solve this problem while maintaining the maximal parallelism.<br>
+Answer the following question:
+<div class="indent">
+Describe the synchronization you used in this part of the assignment.
+</div>
+<br>
+Determine how long it takes to run the serial (Part 3) and parallel (Part 5)
+versions of the program for values of n between 1 and at least 12.  You
+can go higher if you like.  Be sure to run the serial and parallel versions
+on the same type of machine which should have at least 2 cores.  Make a table
+of your results.  Include the name of the machine and how many cores it has.<br><br>
+<b>You must run the timing tests on one of the physical Linux machines in the main lab.</b><br>
+Do not run them on your home machine or on any CS machines that have remote access as these
+are virtual machines and you have no control of what resources your program may use.
+When running on a machine in the main lab, check to see that the machine is essentually idle (load average of 0)
+before you run the tests.<br>
+<b>Make a note of the name of the machine you used for your tests and include this information with your table.</b>
+<br>
+<br>
+
+
+<hr>
+
+<br>
+<b>Submission guideline</b> <br>
+<br>
+
+You will submit through the blackboard. Please including the 
+"status.txt",  and a "source" directory that includes all source code 
+and Makefile. <br>
+
+<b>"source" directory: mandatory</b> <br>  
+This directory should include all of your source code (*.c, *.h) and Makefile.
+Without the soure code, you can only get 50% points of your earned at most.
+
+<br>
+<b>status.txt: manadatory</b> <br>
+You should include a status report in the file <tt>status.txt</tt>.
+Here, the status report in <tt>status.txt</tt> should include whether
+you have complete different parts successfully. If successful, include
+the outputs of different parts, named as "output-partx". 
+Please also give brief
+description of what is working and what progress was made on the part
+that is not working. <b>There will be a severe penalty (50% off) if the "status.txt" is not aligned with your
+source code. If there is no "status.txt", you won't get any points.</b><br><br>
+
+<b>Please compress all of these files into a
+zipped file and name it as "abc123.zip". abc123 should be replaced
+with your abcid. </b><br><br>
+
+  <hr>
+Based on the materials from Prof. Steven Robbins.
+
+
+</body></html>

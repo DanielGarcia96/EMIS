@@ -1,0 +1,80 @@
+Testing Basics
+
+Adding A, B, C, and D
+Printing List
+A = 01000001
+B = 01000010
+C = 01000011
+D = 01000100
+
+
+Testing Intermediate
+
+Adding A, B, C, and D
+Printing List
+A = 01000001
+B = 01000010
+C = 01000011
+D = 01000100
+
+Printing index 1
+B = 01000010
+
+Printing index 2
+C = 01000011
+
+Searching and printing C
+C = 01000011
+
+Printing index 0
+A = 01000001
+
+Searching and printing A
+A = 01000001
+
+Printing index 3
+D = 01000100
+
+Searching and printing D
+D = 01000100
+
+
+Testing Advanced
+
+Adding A, B, C, and D
+Printing List
+A = 01000001
+B = 01000010
+C = 01000011
+D = 01000100
+
+Inserting a in index 1
+Inserting b in index 3
+
+Printing List
+A = 01000001
+a = 01100001
+B = 01000010
+b = 01100010
+C = 01000011
+D = 01000100
+
+Removing index 1
+Removing index 2
+
+Printing List
+A = 01000001
+B = 01000010
+C = 01000011
+D = 01000100
+
+Inserting a in index 0
+Inserting c in index 4
+
+Printing List
+A = 01000001
+B = 01000010
+C = 01000011
+D = 01000100
+a = 01100001
+d = 01100100

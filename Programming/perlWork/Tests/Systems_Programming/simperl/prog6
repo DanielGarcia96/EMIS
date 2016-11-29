@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use warnings;
+
+$parent = shift;
+opendir($DH, $parent) || die $!;
+while(readdir($DH)) {
+    print $_,"\n" if -f "$parent/$_";
+}

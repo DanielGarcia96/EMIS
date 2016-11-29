@@ -1,0 +1,7 @@
+BEGIN   {
+        nam="sam"
+        if (nam == "max")
+                print "nam is max"
+            else
+                print "nam is not max, it is", nam
+        }

@@ -1,0 +1,10 @@
+(defun MEMSET (atm L)
+   (cond ( (NULL L) NIL )
+      ( (EQL atm (CAR L)) T)
+      ( T   (MEMSET atm (CDR L)) )
+   )
+)
+
+(setf LIS '(B A R T))
+(print (MEMSET 'A LIS))
+(print (MEMSET 'Z LIS))
