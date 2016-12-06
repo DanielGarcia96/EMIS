@@ -1,0 +1,50 @@
+body {
+	background: url("images/clinic-doctor-health-hospital.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.button {
+	background-color: #4250f4;
+	border-radius: 4px;
+	color: black;
+	border: black;
+	border: 1px solid black;
+}
+.button:hover {
+	background-color: #4250f4;
+	border-radius: 4px;
+	/*box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24), 0 19px 52px 0 rgba(0,0,0,0.19);*/
+	color: white;
+}
+.upper {
+	position: fixed;
+	left: 50%;
+	top: 15%;
+	text-align: center;
+	transform: translate(-50%, -15%);
+}
+.center {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+.partial-lower {
+	position: fixed;
+	left: 50%;
+	bottom: 25%;
+	text-align: center;
+	transform: translate(-50%, -25%);
+}
+.lower {
+	position: fixed;
+	left: 50%;
+	bottom: 20%;
+	text-align: center;
+	transform: translate(-50%, -20%);
+}

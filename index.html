@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="index.css">
+		<link rel="sytlesheet" href="tech/bootstrap-3.3.7/dist/css/bootstrap.min.css">
 		<title>Login Page</title>
 	</head>
 	<body>
-		<form action="tech/login.php" method="POST">
+		<h2 class="upper">Electronic Medical Information System <br>Login</h2>
+		<form class="center" action="tech/login.php" method="POST">
 			<p>
 				<label>Email</label>
 				<input type="text" placeholder="Email" name="email">
@@ -14,13 +17,13 @@
 				<input type="password" placeholder="Password" name="password">
 			</p>
 			<p>
-				<input type="submit">
+				<input class="button" value="Submit" type="submit">
 			</p>
 		</form>
-		No Account? No problem!
-		<form action="tech/signup.php" method "POST">
+		<p class="partial-lower"> No Account? No problem! </p>
+		<form class="lower" action="tech/signup1.php" method "POST">
 			<p>
-				<input type="submit" class="signup" value="Signup">
+				<input class="button" type="submit" class="signup" value="Signup">
 			</p>
 		</form>
 	</body>
