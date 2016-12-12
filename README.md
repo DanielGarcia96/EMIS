@@ -1,5 +1,6 @@
 #EMIS
 Electronic Medical Information System
+
 A website where you can make appointments with your doctor
 
 To install, first install Apache2 then:
