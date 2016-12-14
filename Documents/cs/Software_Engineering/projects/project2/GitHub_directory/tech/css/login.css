@@ -1,0 +1,42 @@
+body{
+	background-color: blue;
+}
+h1{
+	color: white;
+}
+
+h3{
+color: white;
+}
+
+.col-md-6{
+	
+	text-align: center;
+}
+
+.container {
+	background-color: yellow;
+    background:  url();
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+	width: 100%;
+	background: #f8f8f8;
+	text-align: center;
+}
+
+.btn-primary{
+	background: grey;
+	color: black;
+	border: 0 none;
+	box-shadow: 2px 2px grey;
+}
+
+.btn-primary:hover {
+    background: #222;
+    outline: none;
+    border: none;
+    
+}
