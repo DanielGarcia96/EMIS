@@ -1,0 +1,41 @@
+.container {
+	background-color: yellow;
+    background:  url();
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+	width: 100%;
+	background: #f8f8f8;
+	text-align: center;
+}
+
+.perl{
+
+	background-color: yellow;
+}
+
+.luxury{
+	background-color: yellow;
+}
+
+.southeast{
+	background-color: yellow;
+}
+
+.btn-primary{
+	background: black;
+	color: white;
+	border: 0 none;
+	box-shadow: 2px 2px grey;
+}
+
+
+
+.btn-primary:hover {
+	background: yellow;
+	color: grey;
+	border: 1px solid black;
+	
+}
